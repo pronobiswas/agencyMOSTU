@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
+/* body{
+    width: 100%;
+    height: 100%;
+} */
 
-
-.logoTX{
-    letter-spacing: -2px;
-    background: linear-gradient(135deg, #004b29, #51ff00);
-    -webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+:root {
+    --primery: #0015d1;
 }
 
-.mainmenu{
+.bannerHeading {
+    letter-spacing: -2px;
+    -webkit-text-stroke: 1px var(--primery);
+    background: linear-gradient(135deg, #2e02f0, #00b1e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hidden {
+    display: none;
+}
+
+.heroSection {
+    width: 100%;
+
+}
+
+.heroContainer {
+    width: 100%;
+    /* height: 100%; */
+    animation: mainContainerAnim 1s ease-in-out;
+}
+
+@keyframes mainContainerAnim {
+    from {
+        width: 100%;
+        height: 100%;
+        background: #015f0117;
+        overflow: hidden;
+        position: absolute;
+        top: 10%;
+        left: -50%;
+        transform: translate(50%, 10%) scale(.5, .1);
+
+    }
+
+    to {
+        width: 100%;
+        height: 100%;
+        background: #a9f5ff31;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0) scale(1, 1);
+
+    }
+}
+
+.mainmenu {
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 100vh;
-    background-color: #00bb67e3;
-    animation: example .5s  ease-in-out;
+    background-color: #ffffff;
+    animation: example .5s ease-in-out;
     overflow: hidden;
     z-index: 333;
+
+
 }
-.reversemenu{
+
+.reversemenu {
     position: absolute;
     top: 0;
     right: 0;
@@ -29,65 +80,102 @@
     background-color: #004b2941;
     overflow: hidden;
     z-index: 333;
-    animation: example2 .2s  ease-in-out ;
+    animation: example2 .2s ease-in-out;
 }
 
 @keyframes example {
     from {
-        width: 100px; 
-        height: 100px; 
+        width: 100px;
+        height: 100px;
         border-bottom-left-radius: 100%;
+
     }
-    to {width: 100%;
+
+    to {
+        width: 100%;
         height: 100vh;
         border-radius: 5px;
-    }
-  }
 
-  @keyframes example2 {
+    }
+}
+
+@keyframes example2 {
     from {
         width: 100%;
         height: 100vh;
         border-radius: 5px;
     }
-    to { width: 100px; 
-        height: 100px; 
+
+    to {
+        width: 100px;
+        height: 100px;
         border-bottom-left-radius: 100%;
         display: none;
+        opacity: 0;
     }
-  }
+}
 
-.navBtn{
-    background:white;
-    border: 1px solid #02a702;
-    padding:10px 20px;
+.navBtn {
+    background: white;
+    border: 1px solid var(--primery);
+    padding: 10px 20px;
     border-radius: 30px;
     font-weight: 600;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    
+    color: var(--primery);
+
 }
-.navBtn::before{
+
+.navBtn::before {
     position: absolute;
     content: "";
     top: 30px;
     left: 100px;
     width: 100%;
     height: 100%;
-    background-color: #02a702cc;
+    background-color: var(--primery);
     border-radius: 30px;
     transition: .2s all linear;
 }
-.navBtn:hover::before{
+
+.navBtn:hover::before {
     top: 0;
     left: 0;
 }
+
 .navBtn .btnTxt {
-    position: relative; /* Ensure it's in the flow */
-    transition: color 0.3s ease; /* Smooth color transition */
+    position: relative;
+    /* Ensure it's in the flow */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
 }
-.navBtn:hover .btnTxt{
+
+.navBtn:hover .btnTxt {
     z-index: 2;
     color: white;
+}
+
+.talkBG {
+    background-image: url('./assets/talk2.png');
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.menuLink {
+    -webkit-text-stroke: 1px #0015d1;
+    font-weight: bold;
+    background: linear-gradient(to left, white 50%, #1400cc 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition:  0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.menuLink:hover {
+    background-position: 0 0;
+    letter-spacing: 5px;
 }
