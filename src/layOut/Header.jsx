@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 import logo1 from '../assets/jviLOGO.jpg'
 import { TbMenuDeep } from "react-icons/tb";
 import MenuComponent from '../component/MenuComponent';
-import { ImCancelCircle } from "react-icons/im";
+
 
 
 const header = () => {
@@ -29,14 +29,14 @@ const header = () => {
   }
   return (
     <>
-      <header>
-        <nav className='container mx-auto w-full flex items-center justify-between py-5 relative'>
+      <header className='shadow-xl'>
+        <nav className='container mx-auto w-full flex items-center justify-between md:py-5 relative '>
           <div className="logoTX text-3xl font-bold">
             <img src={logo1} alt="png" className='w-20'/>
           </div>
           <div className=" flex items-center gap-5">
             <div className='navBtn'>
-              <span className='btnTxt'>Get a Quote</span>
+              <span className='btnTxt'>Take a tour</span>
             </div>
             <div className='w-10 h-10 flex items-center justify-center'>
 
@@ -48,13 +48,10 @@ const header = () => {
      {
       showMenu?
           <div id='mainmenu' ref={menuRef}  className={showMenu?"mainmenu":"example2"}>
-            <div className='flex justify-end'>
-            <span onClick={handleClose} className='text-4xl'><ImCancelCircle /></span>
-            </div>
-
+            
             <div className="flex items-center justify-center">
 
-            <MenuComponent/>
+            <MenuComponent handleClose={handleClose} />
             </div>
 
           </div>
