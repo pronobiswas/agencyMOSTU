@@ -6,7 +6,7 @@ import MenuComponent from '../component/MenuComponent';
 
 
 
-const header = () => {
+const Header = () => {
   const menuRef = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
   const [showDown ,setShowdown] = useState(false);
@@ -63,4 +63,4 @@ const header = () => {
   )
 }
 
-export default header
+export default Header
