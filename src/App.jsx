@@ -8,6 +8,7 @@ import DualSliderComponent from "./component/DualSliderComponent.jsx";
 import AboutComponent from "./component/AboutComponent.jsx";
 import OurServices from "./component/OurServices.jsx";
 import BnnerComponent from "./component/homeCompnent/BnnerComponent.jsx";
+import BallScrollComponent from "./component/homeCompnent/BallScrollComponent.jsx";
 
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -70,6 +71,7 @@ function App() {
           </div>
         </Marquee>
       </div>
+      <BallScrollComponent/>
       <AboutComponent />
       <div className="sliderSection">
         <DualSliderComponent />

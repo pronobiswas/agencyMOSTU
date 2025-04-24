@@ -59,6 +59,7 @@
     animation: mainlogoTxtAnim 2s ease-in infinite alternate;
 }
 
+
 @keyframes mainlogoTxtAnim {
 
 
@@ -287,4 +288,15 @@
 .mySwiper .swiper-slide {
     box-shadow: none !important;
     /* Removes Swiper's default shadow */
+}
+#ball{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% -50%);
+    mix-blend-mode: difference;
+
 }

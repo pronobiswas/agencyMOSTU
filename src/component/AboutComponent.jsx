@@ -21,11 +21,11 @@ const AboutComponent = () => {
             </div>
           </div>
           <div className="w-1/2">
-            {/* <DotLottieReact
+            <DotLottieReact
               src="https://lottie.host/31f23441-c768-4582-bbdc-07fd6cfc8786/GDuRHBJwIp.lottie"
               loop
               autoplay
-            /> */}
+            />
             
           </div>
         </div>
