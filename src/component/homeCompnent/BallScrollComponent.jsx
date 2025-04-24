@@ -18,14 +18,20 @@ const BallScrollComponent = () => {
 
       // Stick the wrapper at the top
       if (ballWrapperRef.current) {
+        if (currentScroll > 900) {
+            ballWrapperRef.current.style.position = "static";
+            ballWrapperRef.current.style.top = "0";
+          } 
         if (currentScroll > 1000) {
           ballWrapperRef.current.style.position = "fixed";
           ballWrapperRef.current.style.top = "0";
           ballWrapperRef.current.style.zIndex = "99999";
-        } else {
-          ballWrapperRef.current.style.position = "static";
-          ballWrapperRef.current.style.top = "0";
         }
+        if (currentScroll > 1300) {
+            ballWrapperRef.current.style.position = "static";
+          ballWrapperRef.current.style.top = "0";
+          } 
+
       }
 
       // Move and resize the ball
@@ -73,7 +79,7 @@ const BallScrollComponent = () => {
           </div>
         </div>
       </div>
-      <div className='w-full h-screen'></div>
+      {/* <div className='w-full h-screen'></div> */}
     </>
   );
 };
