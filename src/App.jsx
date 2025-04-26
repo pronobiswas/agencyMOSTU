@@ -9,6 +9,8 @@ import AboutComponent from "./component/AboutComponent.jsx";
 import OurServices from "./component/OurServices.jsx";
 import BnnerComponent from "./component/homeCompnent/BnnerComponent.jsx";
 import BallScrollComponent from "./component/homeCompnent/BallScrollComponent.jsx";
+import Verifiable from "./component/homeCompnent/Verifiable.jsx";
+import BannerComcnent2 from "./component/homeCompnent/BannerComcnent2.jsx";
 
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -74,11 +76,11 @@ function App() {
       {/* <BallScrollComponent/> */}
       <OurServices />
       <AboutComponent />
+      <BannerComcnent2/>
       <div className="sliderSection py-10">
         <DualSliderComponent />
       </div>
-      
-
+      <Verifiable/>
       <Footer />
     </>
   );

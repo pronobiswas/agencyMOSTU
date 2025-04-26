@@ -71,7 +71,7 @@ const OurServices = () => {
       
         // Check for the second indicator
         if (indicatorsRef.current[1]) {
-          if (scrollY >= 1400 && scrollY < 1500) {
+          if (scrollY >= 1300 && scrollY < 1400) {
             indicatorsRef.current[1].style.width = "40px";
             indicatorsRef.current[1].style.height = "40px";
             indicatorsRef.current[1].style.backgroundColor = "#313636";
@@ -81,7 +81,7 @@ const OurServices = () => {
             indicatorsRef.current[2].style.backgroundColor = "#313636";
             indicatorsRef.current[2].style.border = "none";
 
-          } else if (scrollY >= 1500) {
+          } else if (scrollY >= 1400) {
             indicatorsRef.current[1].style.width = "20px";
             indicatorsRef.current[1].style.height = "20px";
             indicatorsRef.current[1].style.border = "none";
@@ -101,6 +101,32 @@ const OurServices = () => {
             indicatorsRef.current[2].style.backgroundColor = "red";
             indicatorsRef.current[2].style.border = "none";
           }
+        }
+        if (indicatorsRef.current[3]) {
+          if (scrollY >= 1700 && scrollY < 1800) {
+            indicatorsRef.current[3].style.width = "20px";
+            indicatorsRef.current[3].style.height = "20px";
+            indicatorsRef.current[3].style.backgroundColor = "#313636";
+            indicatorsRef.current[3].style.border = "none";
+          } else if (scrollY >= 1800) {
+            indicatorsRef.current[3].style.width = "40px";
+            indicatorsRef.current[3].style.height = "40px";
+            indicatorsRef.current[3].style.backgroundColor = "#313636";
+            indicatorsRef.current[3].style.border = "2px solid red";
+          }
+        }
+        
+      }
+      // ==change the imageRef===
+      if (imageRef.current) {
+        if (scrollY >= 1800) {
+          imageRef.current.src = "https://img.etimg.com/thumb/width-1600,height-900,imgsize-19476,resizemode-75,msid-106262899/tech/technology/new-ai-model-life2vec-may-predict-human-lifespan-researchers.jpg";
+        } else if (scrollY >= 1500) {
+          imageRef.current.src = "https://www.koombea.com/wp-content/uploads/2024/05/creating-an-ai-banner@2x.webp";
+        } else if (scrollY >= 1300) {
+          imageRef.current.src = "https://img.freepik.com/premium-photo/diagram-illustrating-flow-data-machine-learning-pipeline-from-data-ingestion-model_1314467-175806.jpg";
+        } else if (scrollY >= 1100) {
+          imageRef.current.src = "https://biglysales.com/wp-content/uploads/2024/06/AI-app-development-cost-cost-to-develop-an-AI-app-how-much-it-cost-to-develop-an-AI-app-Bigly-Sales.webp";
         }
       }
       
@@ -150,7 +176,6 @@ const OurServices = () => {
         </div>
       </section>
     </section>
-    <section className="w-full h-[2000px] bg-gray-900"></section>
     </>
   );
 };

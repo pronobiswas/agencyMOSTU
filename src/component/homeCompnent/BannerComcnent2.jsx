@@ -1,0 +1,92 @@
+import React from "react";
+import { BsBoxArrowUpRight } from "react-icons/bs";
+
+const BannerComcnent2 = () => {
+  return (
+    <>
+      <div id="banner" className="w-full h-screen bg-gray-900 font-sans">
+        <header className="w-full text-white">
+          <nav className="w-full flex justify-between items-center py-4 px-8">
+            <div className="logo font-bold text-3xl">
+              JVI<small>jvi</small>
+            </div>
+            <div className="menu bg-[#ffffff23] border border-[#b9b9b9a9] py-1 px-4 rounded-4xl">
+              <ul className="flex gap-8 [&>li]:cursor-pointer">
+                <li>Overview</li>
+                <li>Technology</li>
+                <li>Testimonial ▼</li>
+                <li>Resources</li>
+              </ul>
+            </div>
+            <div className="user flex gap-2">
+              <button className="bg-[#ffffff23] py-1 px-4 rounded-[10px] border border-[#b9b9b9a9]">
+                Log In
+              </button>
+              <button className="bg-[#ffff] text-black py-1 px-4 rounded-[10px] border border-[#b9b9b9a9]">
+                Get Started
+              </button>
+            </div>
+          </nav>
+        </header>
+        <div className="py-15">
+          <div className="container flex justify-center items-center mx-auto mb-20">
+            <div className="banner_img w-30 h-30 border-2 border-[#797979] rounded-xl">
+              <img src="#" alt="" />
+            </div>
+          </div>
+
+          <div className="banner_container container mx-auto">
+            <div className="banner_text text-white mb-15">
+              <h1 className="text-6xl text-center">Verify to Trust Ai</h1>
+              <p className="w-full max-w-[320px] text-center mx-auto mt-5 mb-8">
+                Transforming Ideas into Reality with Cutting-Edge Technology
+              </p>
+              <div className="slide_box mx-auto w-[170px] flex items-center gap-2 p-[2px] bg-white rounded">
+                <div className="slide_icon w-10 h-10 bg-green-700 flex items-center justify-center rounded">
+                  {" "}
+                  &gt;
+                </div>
+                <span className="text-black">Schedule Demo</span>
+              </div>
+            </div>
+            {/* ========= */}
+            <div>
+              <p className="text-center text-white mb-4">Lorem, ipsum dolor.</p>
+              <div className="text-white flex justify-center gap-4">
+                <div className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl">
+                  <div className="icon_box bg-[#4e4e4e62] p-5 rounded">
+                    <span className="text-4xl">
+                      <BsBoxArrowUpRight />
+                    </span>
+                  </div>
+                  <span>Dell</span>
+                  <p>Appliance</p>
+                </div>
+                <div className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl">
+                  <div className="icon_box bg-[#4e4e4e62] p-5 rounded">
+                    <span className="text-4xl">
+                      <BsBoxArrowUpRight />
+                    </span>
+                  </div>
+                  <span>Dell</span>
+                  <p>Appliance</p>
+                </div>
+                <div className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl">
+                  <div className="icon_box bg-[#4e4e4e62] p-5 rounded">
+                    <span className="text-4xl">
+                      <BsBoxArrowUpRight />
+                    </span>
+                  </div>
+                  <span>Dell</span>
+                  <p>Appliance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default BannerComcnent2;
