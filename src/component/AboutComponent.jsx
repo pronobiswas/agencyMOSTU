@@ -4,7 +4,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 const AboutComponent = () => {
   return (
     <>
-      <section className="w-full py-10">
+      <section className="w-full pb-20 pt-24">
         <div className="container mx-auto flex">
           <div className="w-1/2 flex items-center">
             <div className="w-full max-w-[500px]">

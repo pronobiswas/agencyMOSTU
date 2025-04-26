@@ -71,12 +71,13 @@ function App() {
           </div>
         </Marquee>
       </div>
-      <BallScrollComponent/>
+      {/* <BallScrollComponent/> */}
+      <OurServices />
       <AboutComponent />
-      <div className="sliderSection">
+      <div className="sliderSection py-10">
         <DualSliderComponent />
       </div>
-      <OurServices />
+      
 
       <Footer />
     </>
