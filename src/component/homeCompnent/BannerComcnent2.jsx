@@ -1,7 +1,39 @@
 import React from "react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 
 const BannerComcnent2 = () => {
+  const textRef = useRef(null);
+  const boxRef1 = useRef(null);
+  const boxRef2 = useRef(null);
+  const boxRef3 = useRef(null);
+  useEffect(() => {
+    gsap.to(textRef.current, { 
+      y: 0,
+      duration: 1,
+      opacity: 1, 
+      ease: "power2.out",
+    });
+    gsap.to(boxRef1.current, { 
+      x: 0,
+      duration: 1,
+      opacity: 1, 
+      ease: "power2.out",
+    });
+    gsap.to(boxRef2.current, { 
+      y: 0,
+      duration: 1,
+      opacity: 1, 
+      ease: "power2.out",
+    })
+    gsap.to(boxRef3.current, { 
+      x: 0,
+      duration: 1,
+      opacity: 1, 
+      ease: "power2.out",
+    });;
+  }, []);
   return (
     <>
       <div id="banner" className="w-full h-screen bg-gray-900 font-sans">
@@ -37,7 +69,9 @@ const BannerComcnent2 = () => {
 
           <div className="banner_container container mx-auto">
             <div className="banner_text text-white mb-15">
-              <h1 className="text-6xl text-center">Verify to Trust Ai</h1>
+              <div className="text-center w-full ">
+                <h1 ref={textRef} className="text-6xl text-center translate-y-40 opacity-0">Verify to Trust Ai</h1>
+              </div>
               <p className="w-full max-w-[320px] text-center mx-auto mt-5 mb-8">
                 Transforming Ideas into Reality with Cutting-Edge Technology
               </p>
@@ -53,7 +87,7 @@ const BannerComcnent2 = () => {
             <div>
               <p className="text-center text-white mb-4">Lorem, ipsum dolor.</p>
               <div className="text-white flex justify-center gap-4">
-                <div className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl">
+                <div ref={boxRef1} className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl translate-x-[-200px]">
                   <div className="icon_box bg-[#4e4e4e62] p-5 rounded">
                     <span className="text-4xl">
                       <BsBoxArrowUpRight />
@@ -62,7 +96,7 @@ const BannerComcnent2 = () => {
                   <span>Dell</span>
                   <p>Appliance</p>
                 </div>
-                <div className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl">
+                <div ref={boxRef2} className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl translate-y-[200px]">
                   <div className="icon_box bg-[#4e4e4e62] p-5 rounded">
                     <span className="text-4xl">
                       <BsBoxArrowUpRight />
@@ -71,7 +105,7 @@ const BannerComcnent2 = () => {
                   <span>Dell</span>
                   <p>Appliance</p>
                 </div>
-                <div className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl">
+                <div ref={boxRef3} className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl translate-x-[200px]">
                   <div className="icon_box bg-[#4e4e4e62] p-5 rounded">
                     <span className="text-4xl">
                       <BsBoxArrowUpRight />
