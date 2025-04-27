@@ -98,7 +98,7 @@ const BannerComcnent2 = () => {
             <div>
               <p className="text-center text-white mb-4">Lorem, ipsum dolor.</p>
               <div className="text-white flex justify-center gap-4">
-                <div ref={boxRef1} className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl translate-x-[-200px]">
+                <div ref={boxRef1} className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl translate-x-[-200px] opacity-0">
                   <div className="icon_box bg-[#4e4e4e62] p-5 rounded">
                     <span className="text-4xl">
                       <BsBoxArrowUpRight />
@@ -107,7 +107,7 @@ const BannerComcnent2 = () => {
                   <span>Dell</span>
                   <p>Appliance</p>
                 </div>
-                <div ref={boxRef2} className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl translate-y-[200px]">
+                <div ref={boxRef2} className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl translate-y-[200px] opacity-0">
                   <div className="icon_box bg-[#4e4e4e62] p-5 rounded">
                     <span className="text-4xl">
                       <BsBoxArrowUpRight />
@@ -116,7 +116,7 @@ const BannerComcnent2 = () => {
                   <span>Dell</span>
                   <p>Appliance</p>
                 </div>
-                <div ref={boxRef3} className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl translate-x-[200px]">
+                <div ref={boxRef3} className="py-4 px-12 flex flex-col items-center bg-[#4e4e4e62] rounded-2xl translate-x-[200px] opacity-0">
                   <div className="icon_box bg-[#4e4e4e62] p-5 rounded">
                     <span className="text-4xl">
                       <BsBoxArrowUpRight />
