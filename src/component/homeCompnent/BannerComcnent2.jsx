@@ -8,31 +8,40 @@ const BannerComcnent2 = () => {
   const boxRef1 = useRef(null);
   const boxRef2 = useRef(null);
   const boxRef3 = useRef(null);
+  const scheduleRef = useRef(null);
   useEffect(() => {
-    gsap.to(textRef.current, { 
-      y: 0,
-      duration: 1,
-      opacity: 1, 
-      ease: "power2.out",
-    });
-    gsap.to(boxRef1.current, { 
-      x: 0,
-      duration: 1,
-      opacity: 1, 
-      ease: "power2.out",
-    });
-    gsap.to(boxRef2.current, { 
+    const tl = gsap.timeline();
+    tl.to(textRef.current, {
       y: 0,
       duration: 1,
       opacity: 1, 
       ease: "power2.out",
     })
-    gsap.to(boxRef3.current, { 
+    tl.to(scheduleRef.current, { 
+      width: "170px",
+      duration: 1,
+      opacity: 1, 
+      ease: "power2.out",
+    });
+    tl.to(boxRef1.current, { 
       x: 0,
       duration: 1,
       opacity: 1, 
       ease: "power2.out",
-    });;
+    },"<");
+    tl.to(boxRef2.current, { 
+      y: 0,
+      duration: 1,
+      opacity: 1, 
+      ease: "power2.out",
+    },"<")
+    tl.to(boxRef3.current, { 
+      x: 0,
+      duration: 1,
+      opacity: 1, 
+      ease: "power2.out",
+    },"<");
+    
   }, []);
   return (
     <>
@@ -61,6 +70,7 @@ const BannerComcnent2 = () => {
           </nav>
         </header>
         <div className="py-15">
+
           <div className="container flex justify-center items-center mx-auto mb-20">
             <div className="banner_img w-30 h-30 border-2 border-[#797979] rounded-xl">
               <img src="#" alt="" />
@@ -75,15 +85,16 @@ const BannerComcnent2 = () => {
               <p className="w-full max-w-[320px] text-center mx-auto mt-5 mb-8">
                 Transforming Ideas into Reality with Cutting-Edge Technology
               </p>
-              <div className="slide_box mx-auto w-[170px] flex items-center gap-2 p-[2px] bg-white rounded">
-                <div className="slide_icon w-10 h-10 bg-green-700 flex items-center justify-center rounded">
+              {/* ==schedule== */}
+              <div ref={scheduleRef} className="slide_box mx-auto w-[44px] flex items-center gap-2 p-[2px] bg-white rounded cursor-pointer">
+                <div className="slide_icon w-10 h-10 bg-green-700 flex items-center justify-center rounded shrink-0">
                   {" "}
                   &gt;
                 </div>
-                <span className="text-black">Schedule Demo</span>
+                <span className="text-black text-nowrap">Schedule Demo</span>
               </div>
             </div>
-            {/* ========= */}
+            
             <div>
               <p className="text-center text-white mb-4">Lorem, ipsum dolor.</p>
               <div className="text-white flex justify-center gap-4">
@@ -117,6 +128,7 @@ const BannerComcnent2 = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </>
