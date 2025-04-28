@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { Draggable } from "gsap/Draggable";
 import { BsBoxArrowUpRight } from "react-icons/bs";
-import { div } from "three/tsl";
+gsap.registerPlugin(Draggable);
 
 const BannerComcnent2 = () => {
   const textRef = useRef(null);
@@ -10,6 +11,8 @@ const BannerComcnent2 = () => {
   const boxRef2 = useRef(null);
   const boxRef3 = useRef(null);
   const scheduleRef = useRef(null);
+  const scheduleSlide = useRef(null);
+  const scheduleText = useRef(null);
   useEffect(() => {
     const tl = gsap.timeline();
     tl.to(textRef.current, {
@@ -66,6 +69,21 @@ const BannerComcnent2 = () => {
         grid: "auto",
         ease: "power1.inOut",
       },
+    });
+    Draggable.create(scheduleSlide.current, {
+      type: "x", 
+      bounds: ".slide_box",
+      onDrag: function () {
+        
+        const distance = this.x;
+        const maxShift = 40;
+        const shift = Math.min(distance, maxShift);
+        gsap.to(scheduleText.current, {
+          x: -shift, 
+          duration: 0.1,
+        });
+      },
+      inertia: true,
     });
   }, []);
   return (
@@ -142,14 +160,18 @@ const BannerComcnent2 = () => {
               {/* ==schedule== */}
               <div
                 ref={scheduleRef}
-                className="slide_box mx-auto w-[44px] flex items-center gap-2 p-[2px] bg-white rounded cursor-pointer"
+                className=" mx-auto w-[44px] p-[2px]  bg-white rounded cursor-pointer"
               >
-                <div className="slide_icon w-10 h-10 bg-green-700 flex items-center justify-center rounded shrink-0">
-                  {" "}
-                  &gt;
+                <div className="slide_box flex items-center gap-2">
+                  <div ref={scheduleSlide} className="slide_icon w-10 h-10 bg-green-700 flex items-center justify-center rounded shrink-0">
+                    {" "}
+                    &gt;
+                  </div>
+                  <span ref={scheduleText} className="text-black text-nowrap">Schedule Demo</span>
                 </div>
-                <span className="text-black text-nowrap">Schedule Demo</span>
+
               </div>
+
             </div>
 
             <div>

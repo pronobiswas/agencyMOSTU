@@ -15,9 +15,10 @@ const Verifiable = () => {
             AI with
           </h2>
         </div>
+        {/* =====scrollable container====== */}
         <div className="w-full bg-green-800 py-8">
-          <div className="container mx-auto flex justify-center items-center gap-4">
-            <div className="w1/2 flex items-center gap-4">
+          <div className="container mx-auto flex justify-center items-center gap-10">
+            <div className="w-1/2 flex items-center justify-end gap-10">
               <h2 className="text-4xl text-green-400 font-bold">
                 Lorem, ipsum.
               </h2>
@@ -30,22 +31,22 @@ const Verifiable = () => {
                 <div className="ball_identifier w-3 h-3 bg-green-600 rounded-full absolute bottom-[-90px] left-[-40px]"></div>
               </div>
             </div>
-            <div className="w1/2">
-              <ul className="flex flex-col gap-4">
+            <div className="w-1/2">
+              <ul className="evolving_list">
                 <li>
-                  <div>
+                  <div className="evolving_list_item">
+                    <h4 className="font-bold text-white text-xl">Lorem ipsum dolor sit.</h4>
+                    <small>Lorem ipsum dolor sit amet.</small>
+                  </div>
+                </li>
+                <li>
+                  <div className="evolving_list_item">
                     <h4 className="font-bold">Lorem ipsum dolor sit.</h4>
                     <small>Lorem ipsum dolor sit amet.</small>
                   </div>
                 </li>
                 <li>
-                  <div>
-                    <h4 className="font-bold">Lorem ipsum dolor sit.</h4>
-                    <small>Lorem ipsum dolor sit amet.</small>
-                  </div>
-                </li>
-                <li>
-                  <div>
+                  <div className="evolving_list_item">
                     <h4 className="font-bold">Lorem ipsum dolor sit.</h4>
                     <small>Lorem ipsum dolor sit amet.</small>
                   </div>

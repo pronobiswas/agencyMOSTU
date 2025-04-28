@@ -396,3 +396,12 @@
     line-height: 1.1;
     color: #a6a6a6;
   }
+  .evolving_list{
+    @apply p-1 flex flex-col items-start gap-8;
+  }
+  .evolving_list_item{
+    @apply text-white 
+  }
+  .evolving_list_item h4{
+    @apply text-green-400 text-2xl font-medium
+  }
