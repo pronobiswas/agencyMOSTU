@@ -25,7 +25,7 @@ const BnnerComponent = () => {
                   <div className="container mx-auto">
                     <section className="w-full pt-12 flex md:pt-20 lg:pt-30">
                       <aside className="w-1/2" >
-                      <div data-aos="fade-right">
+                      <div>
                         <h1 className="bannerHeading text-4xl font-bold  w-full mx-auto md:text-6xl lg:text-8xl">
                           AI Powered Digital groth Agency
                         </h1>
@@ -58,7 +58,7 @@ const BnnerComponent = () => {
                         </div>
                       </div>
                       </aside>
-                      <aside className="w-1/2" data-aos="fade-left">
+                      <aside className="w-1/2">
                         <iframe
                           style={{
                             width: "100%",

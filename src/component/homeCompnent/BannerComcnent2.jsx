@@ -24,7 +24,7 @@ const BannerComcnent2 = () => {
         trigger: "textRef.current",
         start: "top 40%",
         toggleActions: "play none none restart",
-        scrub: true,
+        // scrub: true,
         // markers: true
       }
     });

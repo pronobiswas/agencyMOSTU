@@ -19,13 +19,12 @@ const ScrollBallComponent = () => {
                 start: "top 80%",
                 end: "top 10%",
                 scrub: true,
-                markers: true,
+                // markers: true,
               },
-        
         });
 
         tl.to(ball, {
-            y: 200,
+            yPercent: 900,
             duration:2.5,
             ease: "power1.inOut",
           })
@@ -64,7 +63,7 @@ const ScrollBallComponent = () => {
             <div ref={ballRef} className="w-6 h-6 mx-auto bg-white rounded-full mix-blend-difference"></div>
             <div className="bal_content_container mt-30 mb-10">
               <h1 className="text-center text-6xl font-bold lg:text-9xl">
-                Pronob Biswas
+                JOINT VENTURE AI
               </h1>
               <div className="w-full flex pt-20 pb-16">
                 <div className="w-1/2"></div>
