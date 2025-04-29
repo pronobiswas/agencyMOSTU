@@ -20,6 +20,13 @@ const BannerComcnent2 = () => {
       duration: 1,
       opacity: 1,
       ease: "power2.out",
+      scrollTrigger: {
+        trigger: "textRef.current",
+        start: "top 40%",
+        toggleActions: "play none none restart",
+        scrub: true,
+        // markers: true
+      }
     });
     tl.to(scheduleRef.current, {
       width: "170px",
