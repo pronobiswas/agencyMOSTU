@@ -33,10 +33,33 @@ const OurServices = () => {
       duration: 1,
       ease: "power2.inOut",
     });
+    const line = lineRef.current;
+    if(line) {
+      tl1.to(line, {
+        duration: 1,
+        backgroundSize: "100% 500%",
+        ease: "power2.inOut",
+      })
+      .to(line, {
+        duration: 1,
+        backgroundSize: "100% 500%",
+        ease: "power2.inOut",
+      })
+      .to(line, {
+        duration: 1,
+        backgroundSize: "100% 500%",
+        ease: "power2.inOut",
+      })
+      .to(line, {
+        duration: 1,
+        backgroundSize: "100% 500%",
+        ease: "power2.inOut",
+      });
+    }
   
     return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
+      tl1.scrollTrigger?.kill();
+      tl1.kill();
     };
   }, []);
   
